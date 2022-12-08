@@ -1,0 +1,545 @@
+:root {
+    --main-color: #111820;
+    --border-color: #eee;
+    --section-padding: 100px;
+    --p-color: #777;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.special-heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.special-heading h3 {
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    margin-right: 20px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.special-heading h3:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+.special-heading .see-all {
+    display: flex;
+    align-items: center;
+}
+
+.special-heading .see-all:hover {
+    opacity: 0.7;
+}
+
+.special-heading .see-all a {
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 17px;
+    color: var(--main-color);
+    border-left: solid 2px var(--border-color);
+}
+
+.special-heading .see-all i {
+    padding-left: 17px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.special-heading a:hover {
+    text-decoration: underline;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 0 14px;
+    margin: 0 auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+header {
+    padding: 10px 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    header .container .left .left-menu li:not(:first-child) {
+        display: none;
+    }
+}
+
+header .container .left ul {
+    display: flex;
+}
+
+
+header .container .left ul li {
+    margin-right: 14px;
+}
+
+header .container .left ul li {
+    font-size: 14px;
+}
+
+header .container .left ul li a:not(.active) {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+header .container .left ul li a:not(.active):hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+header .container .left span {
+    margin: 0 5px;
+}
+
+header .container .right {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+header .container .right .sell {
+    display: block;
+    margin-right: 30px;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+header .container .right .sell:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+header .container .right .menu {
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+header .container .right .menu:hover {
+    border: 1px solid var(--border-color);
+
+}
+
+header .container .right .menu:hover>ul {
+    display: block;
+}
+
+header .container .right ul {
+    display: none;
+    position: absolute;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+    z-index: 2;
+    left: 0;
+    background-color: #fcfcfc;
+}
+
+header .container .right ul li a {
+    display: block;
+    padding: 10px 100px 10px 10px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+header .container .right ul li a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+
+header .container .right i {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+
+.midle-head {
+    padding: 10px 0;
+}
+
+.midle-head .container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.midle-head .container img {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.midle-head .container .shop {
+    width: 60px;
+    line-height: 1;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.midle-head .container .arrow-down {
+    margin-right: 10px;
+
+}
+
+.midle-head .container form {
+    position: relative;
+    align-items: center;
+    flex: 1;
+}
+
+.midle-head .container form .search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.midle-head .container form input {
+    width: 100%;
+    height: 37.6px;
+    padding: 0 160px 0 50px;
+}
+
+.midle-head .container form a {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 35px 0 20px;
+    border-left: 1px solid var(--border-color);
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.midle-head .container form .arrow-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.midle-head .container .search {
+    display: block;
+    margin: 0 10px;
+    padding: 8px 50px;
+    text-decoration: none;
+    background-color: #3665f3;
+    color: white;
+}
+
+.midle-head .container span {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.bot-head .container ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.bot-head .container ul a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.bot-head .container ul a.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.landing {
+    padding-top: 5px;
+}
+
+.landing .container img {
+    width: 100%;
+    height: 282px;
+}
+
+.popular-categories {
+    padding: 30px 0;
+}
+
+.popular-categories .container .items {
+    display: flex;
+    text-align: center;
+    padding: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.popular-categories .container .items .item {
+    width: 13%;
+}
+
+.popular-categories .container .items .item img {
+    width: 100%;
+}
+
+.popular-categories .container .items .item a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.popular-categories .container .items .item a:hover,
+.popular-categories .container .items .item img:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.popular-brands {
+    padding: 30px 0;
+}
+
+.popular-brands .container .items {
+    display: flex;
+    text-align: center;
+    padding: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.popular-brands .container .items .item {
+    width: 13%;
+}
+
+.popular-brands .container .items .item img {
+    width: 100%;
+}
+
+.popular-brands .container .items .item a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.popular-brands .container .items .item a:hover,
+.popular-brands .container .items .item img:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.daily-deals {
+    padding: 30px 0;
+}
+
+.daily-deals .container .items {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+.daily-deals .container .items::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 40%;
+    border-radius: 4px;
+    background-color: #777;
+    transition: 0.3s;
+    display: none;
+}
+
+.daily-deals .container .items:hover::after {
+    display: block;
+}
+
+.daily-deals .items .item .image img {
+    height: 250px;
+    width: 100%;
+    border: 25px solid #eee;
+}
+
+
+
+.daily-deals .items .item a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: var(--main-color);
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.daily-deals .items .item a.last {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 12px;
+    margin: 0;
+}
+
+.daily-deals .items .item a:hover,
+.daily-deals .items .item .image:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.landing-two {
+    padding: 30px 0;
+}
+
+.landing-two img {
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+    padding: 30px 0;
+    border-top: 2px solid var(--border-color);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container .footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+footer .container .fMenuTitle {
+    font-size: 16px;
+}
+
+footer .container .fIcons i {
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+footer .container .fList {
+    padding: 0;
+    list-style: none;
+}
+
+footer .container .fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+footer .container .footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .container .fInput {
+    padding: 5px;
+}
+
+footer .container .fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+footer .container .fIcons {
+    display: flex;
+}
+
+footer .container .fIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+footer .container .copyright {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+footer h2 {
+    margin: 20px 0;
+    color: #777;
+}
